@@ -8,6 +8,8 @@ export default {
 
     if (url.pathname === '/example') {
       return Response.redirect('https://example.com', 301);
+    }else if (url.pathname === '/CTDisc') {
+      return Response.redirect('https://discord.gg/Yw2Dwdty7b', 301);
     } else {
       const assetUrl = new URL('nourl.html', request.url).toString();
       const response = await env.ASSETS.fetch(assetUrl); // Use the constructed URL
