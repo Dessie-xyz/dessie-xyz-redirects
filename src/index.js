@@ -6,9 +6,9 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
-    if (url.pathname === '/example') {
+    if (url.pathname.toLowerCase() === '/example') {
       return Response.redirect('https://example.com', 301);
-    }else if (url.pathname === '/CTDisc') {
+    }else if (url.pathname.toLowerCase() === '/ctdisc') {
       return Response.redirect('https://discord.gg/Yw2Dwdty7b', 301);
     } else {
       const assetUrl = new URL('nourl.html', request.url).toString();
